@@ -5,7 +5,6 @@ if(localStorage.tasks) {
     addTasksFromLocalToPage(localStorage.tasks)
 }
 else {
-    console.log("created");
     localStorage.tasks = "";
 }
 submit.onclick = function(e) {
@@ -38,9 +37,7 @@ function addTaskToLocal(taskTitle) {
 };
 function removeTaskFromLocal(taskTitle) {
     let arr = localStorage.tasks.split("#@#");
-    console.log(arr);
     arr.splice(arr.indexOf(taskTitle), 1);
-    console.log(arr);
     localStorage.tasks = arr.join("#@#");
 }
 function addTasksFromLocalToPage(tasks) {
